@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "74b462aa-0c8f-4d16-93fa-b17a578189ba",
+		"name": "Stachka-2024",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Full Tree from root",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/get-node?node=root&id=-1&depth=6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"get-node"
+					],
+					"query": [
+						{
+							"key": "node",
+							"value": "root"
+						},
+						{
+							"key": "id",
+							"value": "-1"
+						},
+						{
+							"key": "depth",
+							"value": "6"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Subtree from Level",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/get-node?node=level&id=41&depth=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"get-node"
+					],
+					"query": [
+						{
+							"key": "node",
+							"value": "level"
+						},
+						{
+							"key": "id",
+							"value": "41"
+						},
+						{
+							"key": "depth",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Path from Task from Lesson with Unit",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/get-path?node=taskInLessonInUnit&id=69",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"get-path"
+					],
+					"query": [
+						{
+							"key": "node",
+							"value": "taskInLessonInUnit"
+						},
+						{
+							"key": "id",
+							"value": "69"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Path from invalid node type",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:7777/api/v1/get-path?node=taskInLessonInLevel&id=69",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7777",
+					"path": [
+						"api",
+						"v1",
+						"get-path"
+					],
+					"query": [
+						{
+							"key": "node",
+							"value": "taskInLessonInLevel"
+						},
+						{
+							"key": "id",
+							"value": "69"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
